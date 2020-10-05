@@ -12,7 +12,7 @@ import './bloc/bloccounter_bloc.dart';
 import 'bloc/listbloc_bloc.dart';
 
 void main() {
-  Bloc.observer = CounterObserver();
+  Bloc.observer = SimpleObserver();
   runApp(
     MultiBlocProvider(providers: [
       BlocProvider<ListblocBloc>(create: (_) => ListblocBloc()),
