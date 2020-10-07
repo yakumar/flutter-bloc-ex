@@ -14,3 +14,9 @@ class AddToListEvent extends ListblocEvent {
 
   AddToListEvent(this.item);
 }
+
+class RemoveFromListEvent extends ListblocEvent {
+  final Item item;
+
+  RemoveFromListEvent(this.item);
+}
