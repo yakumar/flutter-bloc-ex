@@ -21,6 +21,10 @@ class AddItemState extends ListblocState {
   AddItemState(List<Item> itemList) : super(itemList);
 }
 
+class RemoveItemState extends ListblocState {
+  RemoveItemState(List<Item> itemList) : super(itemList);
+}
+
 // class Item extends Equatable {
 //   final String title;
 

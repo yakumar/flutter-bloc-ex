@@ -24,6 +24,15 @@ class ListblocBloc extends Bloc<ListblocEvent, ListblocState> {
       newList.add(item);
 
       yield AddItemState(newList);
+    } else if (event is RemoveFromListEvent) {
+      Item removeItem = event.item;
+      print(removeItem.title);
+
+      List<Item> newList = [...state.itemList]
+          .where((element) => element.title != removeItem.title)
+          .toList();
+
+      yield RemoveItemState(newList);
     }
   }
 }
